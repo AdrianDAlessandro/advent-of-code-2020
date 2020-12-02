@@ -23,12 +23,20 @@ std::vector<int> read_data(std::string file_path)
     return data;
 }
 
-int find_and_multiply(std::vector<int> data)
+int find_and_multiply(std::vector<int> data, bool three_times = false)
 {
     for (int x : data)
         for (int y : data)
         {
-            if ((x + y) == 2020)
+            if (three_times)
+            {
+                for (int z : data)
+                {
+                    if ((x + y + z) == 2020)
+                        return x * y * z;
+                }
+            }
+            else if ((x + y) == 2020)
                 return x * y;
         }
     return 0;
@@ -41,6 +49,9 @@ int main()
 
     std::cout << "example = " << find_and_multiply(ex_data) << std::endl;
     std::cout << "input = " << find_and_multiply(input_data) << std::endl;
+
+    std::cout << "example part2 = " << find_and_multiply(ex_data, true) << std::endl;
+    std::cout << "input part2 = " << find_and_multiply(input_data, true) << std::endl;
 
     return 0;
 }
