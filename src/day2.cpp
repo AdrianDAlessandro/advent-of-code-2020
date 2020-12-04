@@ -48,19 +48,20 @@ int count_valid_passwords(vector<string> data, string policy)
     return valid_passwords;
 }
 
-int main()
+void day2()
 {
-    int example_passwords = count_valid_passwords(read_data("data/day2/example.txt"), "sled");
-    int input_passwords = count_valid_passwords(read_data("data/day2/input.txt"), "sled");
+    vector<string> example_data = read_data("data/day2/example.txt");
+    vector<string> input_data = read_data("data/day2/input.txt");
 
-    cout << "Number of valid passwords (example) = " << example_passwords << endl;
-    cout << "Number of valid passwords (input) = " << input_passwords << endl;
+    int example_passwords = count_valid_passwords(example_data, "sled");
+    int input_passwords = count_valid_passwords(input_data, "sled");
 
-    example_passwords = count_valid_passwords(read_data("data/day2/example.txt"), "toboggan");
-    input_passwords = count_valid_passwords(read_data("data/day2/input.txt"), "toboggan");
+    cout << "Number of valid sled passwords (example) = " << example_passwords << endl;
+    cout << "Number of valid sled passwords (input) = " << input_passwords << endl;
 
-    cout << "Number of valid passwords (example) = " << example_passwords << endl;
-    cout << "Number of valid passwords (input) = " << input_passwords << endl;
+    example_passwords = count_valid_passwords(example_data, "toboggan");
+    input_passwords = count_valid_passwords(input_data, "toboggan");
 
-    return 0;
+    cout << "Number of valid toboggan passwords (example) = " << example_passwords << endl;
+    cout << "Number of valid toboggan passwords (input) = " << input_passwords << endl;
 }

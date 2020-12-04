@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <fstream>
-using namespace std;
+#include "read_data.h"
 
 vector<string> read_data(string file_path)
 {

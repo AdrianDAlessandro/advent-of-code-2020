@@ -1,7 +1,4 @@
-#include <iostream>
-#include <string>
-#include <vector>
-using namespace std;
+#include "read_data.h"
 
 vector<string> read_data(string file_path);
 
@@ -29,16 +26,14 @@ int find_and_multiply(vector<string> data, bool three_times = false)
     return 0;
 }
 
-int main()
+void day1()
 {
-    vector<string> ex_data = read_data("data/day1/example.txt");
+    vector<string> example_data = read_data("data/day1/example.txt");
     vector<string> input_data = read_data("data/day1/input.txt");
 
-    cout << "example = " << find_and_multiply(ex_data) << endl;
+    cout << "example = " << find_and_multiply(example_data) << endl;
     cout << "input = " << find_and_multiply(input_data) << endl;
 
-    cout << "example part2 = " << find_and_multiply(ex_data, true) << endl;
+    cout << "example part2 = " << find_and_multiply(example_data, true) << endl;
     cout << "input part2 = " << find_and_multiply(input_data, true) << endl;
-
-    return 0;
 }
