@@ -56,12 +56,16 @@ void day2()
     int example_passwords = count_valid_passwords(example_data, "sled");
     int input_passwords = count_valid_passwords(input_data, "sled");
 
-    cout << "Number of valid sled passwords (example) = " << example_passwords << endl;
-    cout << "Number of valid sled passwords (input) = " << input_passwords << endl;
+    cout << "Number of valid sled passwords (example) = "
+         << example_passwords << endl;
+    cout << "Number of valid sled passwords (input) = "
+         << input_passwords << endl;
 
     example_passwords = count_valid_passwords(example_data, "toboggan");
     input_passwords = count_valid_passwords(input_data, "toboggan");
 
-    cout << "Number of valid toboggan passwords (example) = " << example_passwords << endl;
-    cout << "Number of valid toboggan passwords (input) = " << input_passwords << endl;
+    cout << "Number of valid toboggan passwords (example) = "
+         << example_passwords << endl;
+    cout << "Number of valid toboggan passwords (input) = "
+         << input_passwords << endl;
 }
